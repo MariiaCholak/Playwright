@@ -113,7 +113,7 @@ test.describe('enhance students understanding of frontend automation, specifical
     await (toDoInput).fill('')
     await addButton.click()
        const noTaskMessage = page.locator('.ml-1 >p')
-    await expect(noTaskMessage).toHaveText(' No tasks found!')
+    await expect(noTaskMessage).toHaveText('No tasks found!')
 
      await (toDoInput).fill('rdfijfdghjdfmvdeirutjhndhodpjkjsjlfmsjjsjj')
      await addButton.click()

@@ -1,6 +1,54 @@
-<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="17.993148000000044">
-<testsuite name="fjfj.spec.ts" timestamp="2025-06-03T17:28:09.257Z" hostname="chromium" tests="1" failures="0" skipped="0" time="8.562" errors="0">
-<testcase name="enhance students understanding of frontend automation, specifically in the context of form submission and date-picking processes › Test Case 05 - Task Validation and Error Handling" classname="fjfj.spec.ts" time="8.562">
+<testsuites id="" name="" tests="5" failures="0" skipped="0" errors="0" time="35.73667100000009">
+<testsuite name="basics\02-project-shopping-cart.spec.ts" timestamp="2025-06-10T16:36:21.832Z" hostname="Basics" tests="5" failures="0" skipped="0" time="64.698" errors="0">
+<testcase name="provide students with hands-on experience in automating the validation of an ecommerce website&apos;s frontend functionalities. › Test Case 01 - Todo-App Modal Verification" classname="basics\02-project-shopping-cart.spec.ts" time="12.451">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\02-project-shopping-cart-p-f1ceb-Todo-App-Modal-Verification-Basics\trace.zip]]
+]]>
+</system-out>
+</testcase>
+<testcase name="provide students with hands-on experience in automating the validation of an ecommerce website&apos;s frontend functionalities. › Test Case 02 -  Cart Section Validation" classname="basics\02-project-shopping-cart.spec.ts" time="12.403">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\02-project-shopping-cart-p-f4d40-2---Cart-Section-Validation-Basics\trace.zip]]
+]]>
+</system-out>
+</testcase>
+<testcase name="provide students with hands-on experience in automating the validation of an ecommerce website&apos;s frontend functionalities. › Test Case 03 - Add a Course to the Cart and Validate" classname="basics\02-project-shopping-cart.spec.ts" time="14.28">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\02-project-shopping-cart-p-d97bc-se-to-the-Cart-and-Validate-Basics\trace.zip]]
+]]>
+</system-out>
+</testcase>
+<testcase name="provide students with hands-on experience in automating the validation of an ecommerce website&apos;s frontend functionalities. › Test Case 04 - Add Two Courses to the Cart and Validate" classname="basics\02-project-shopping-cart.spec.ts" time="16.439">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\02-project-shopping-cart-p-780ce-es-to-the-Cart-and-Validate-Basics\trace.zip]]
+]]>
+</system-out>
+</testcase>
+<testcase name="provide students with hands-on experience in automating the validation of an ecommerce website&apos;s frontend functionalities. › Test Case 05 - Add All Three Courses to the Cart and Validate" classname="basics\02-project-shopping-cart.spec.ts" time="9.125">
+<system-out>
+<![CDATA[Course 1
+Title: SDET Course | Cypress Playwright
+Full price: 80
+Discount percent: 0
+Expected (after discount): 80
+Course 2
+Title: Playwright Automation Testing
+Full price: 72
+Discount percent: 0
+Expected (after discount): 72
+Course 3
+Title: Cypress Automation Course
+Full price: 10
+Discount percent: 0
+Expected (after discount): 10
+
+[[ATTACHMENT|..\test-results\02-project-shopping-cart-p-c0d2f-es-to-the-Cart-and-Validate-Basics\trace.zip]]
+]]>
+</system-out>
 </testcase>
 </testsuite>
 </testsuites>

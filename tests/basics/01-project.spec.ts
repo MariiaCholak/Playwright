@@ -1,6 +1,5 @@
 
 
-
 import { test, expect } from '@playwright/test';
 
 test.describe('enhance students understanding of frontend automation, specifically in the context of form submission and date-picking processes', () => {
@@ -11,7 +10,7 @@ test.describe('enhance students understanding of frontend automation, specifical
   test('Test Case 01 - Todo-App Modal Verification', async ({ page }) => {
     const modal = page.locator('.panel')
     await expect(modal).toBeVisible()
-    await expect(modal).toContainText('My Tasks')
+    await expect(modal).toContainText('My Tasks')  ///toHaveText('' )
     await expect(page.locator("#input-add")).toBeEnabled()
     await expect(page.locator("#search")).toBeEnabled()
 
@@ -99,7 +98,41 @@ test.describe('enhance students understanding of frontend automation, specifical
     const searchtoDo = toDoList[1]
     await search.fill(searchtoDo)
 
+      const newTask = page.locator('#panel span').nth(1)
+    await expect(newTask).toBeVisible()
+    await expect(newTask).toHaveCount(1)
+
   })
 
+   test('Test Case 05 - Task Validation and Error Handling', async ({ page }) => {
+
+     const toDoInput = page.locator('#input-add')
+    const addButton = page.locator('#add-btn')
+    const exceedingMessage = page.locator('[class="notification is-danger"]')
+    
+    await (toDoInput).fill('')
+    await addButton.click()
+       const noTaskMessage = page.locator('.ml-1 >p')
+    await expect(noTaskMessage).toHaveText('No tasks found!')
+
+     await (toDoInput).fill('rdfijfdghjdfmvdeirutjhndhodpjkjsjlfmsjjsjj')
+     await addButton.click()
+     await expect(exceedingMessage).toHaveText('Error: Todo cannot be more than 30 characters!')
+const item = 'Sleep'
+     await (toDoInput).fill(`${item}`)
+     await addButton.click()
+      const newTask = page.locator('#panel span').nth(1)
+    await expect(newTask).toBeVisible()
+    await expect(newTask).toHaveCount(1)
+     await (toDoInput).fill(`${item}`)
+     await addButton.click()
+     await expect(exceedingMessage).toHaveText(`Error: You already have ${item} in your todo list.`)
+
+
+
+
+
+
+})
 
 })
