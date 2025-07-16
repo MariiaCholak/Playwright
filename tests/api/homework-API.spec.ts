@@ -73,7 +73,7 @@ test.describe("API e2e test to perform CRUD operations on student data", () => {
       {
         data: updatedStudent,
       }
-    );
+    ); 
 
     const responseBody = await response.json();
     const newInstructor = responseBody.INSTRUCTOR_ID
