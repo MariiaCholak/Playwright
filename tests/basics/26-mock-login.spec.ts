@@ -15,7 +15,7 @@
 //   await expect(mockInterviewsLoginPage.form).toBeVisible();
 // });
 
-import { test, expect } from '../../fixtures/Page.Fixture';
+import { test, expect } from '../../fixtures/PageFixture';
 
 test.describe('Mock Interviews Login Page', () => {
 

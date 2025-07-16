@@ -10,6 +10,7 @@ export class BackendTestingPage extends BasePage {
   readonly addButton: Locator;
   readonly successMessage: Locator;
   readonly apiDocumentationLink: Locator;
+  readonly deleteAllButton: Locator;
 
   constructor(page: Page) {
     super(page);
@@ -20,7 +21,8 @@ export class BackendTestingPage extends BasePage {
     this.instructorDropdown = this.page.locator('[name="INSTRUCTOR_ID"]');
     this.addButton = this.page.getByRole('button', { name: 'ADD' });
     this.successMessage = this.page.getByText('Successfully added');
-    this.apiDocumentationLink = this.page.getByRole('link', {name: 'Check out API Documentation'})
+    this.apiDocumentationLink = this.page.getByRole('link', { name: 'Check out API Documentation' });
+    this.deleteAllButton = this.page.getByRole('button', { name: 'DELETE ALL' });
   }
 
   async fillFname(fname: string) {

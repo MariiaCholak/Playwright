@@ -58,8 +58,10 @@ test.describe("provide students with hands-on experience in automating the valid
   test('Test Case 01 - Todo-App Modal Verification', async ({ page }) => {
     await expect(shoppingCart.headingAvailableCourses).toHaveText('Available Courses')
 
-    const courseCount = await shoppingCart.allCourses.count();
+    const courseCount = await shoppingCart.allCourses.count();   //// toHaveCount(3)
     expect(courseCount).toBe(3);
+   
+
 
     for (let i = 0; i < courseCount; i++) {
       const course = shoppingCart.allCourses.nth(i);
@@ -71,7 +73,7 @@ test.describe("provide students with hands-on experience in automating the valid
       await expect(course.locator(shoppingCart.nameTag)).not.toBeEmpty();
 
       // Перевірка, що є TechGlobal School tag 
-      await expect(course).toContainText('TechGlobal');
+      await expect(course).toContainText('TechGlobal school');
 
       const priceText = await course.locator(shoppingCart.priceforCourse).innerText();
       const price = parseFloat(priceText.replace('$', '').trim());
@@ -107,7 +109,7 @@ test.describe("provide students with hands-on experience in automating the valid
   test('Test Case 03 - Add a Course to the Cart and Validate', async ({ page }) => {
     await shoppingCart.clickAddButton(0)
 
-    const addedCourse = await shoppingCart.addedCourseDisplay.count()
+    const addedCourse = await shoppingCart.addedCourseDisplay.count()   ///
     expect(addedCourse).toBe(1)
 
     for (let i = 0; i < addedCourse; i++) {

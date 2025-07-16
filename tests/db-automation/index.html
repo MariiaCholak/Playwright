@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tax & Discount Calculator</title>
+</head>
+<body>
+  <h2>Tax & Discount Tool</h2>
+  
+  <label>Product Price: $<input type="number" id="price" /></label><br>
+  <label>Discount (%): <input type="number" id="discount" /></label><br>
+  <label>ZIP Code: <input type="text" id="zip" /></label><br><br>
+
+  <button onclick="calculate()">Calculate</button>
+
+  <p id="result"></p>
+
+  <script>
+    const taxRates = {
+      '30301': 0.08, // Georgia
+      '90001': 0.095, // California
+      '10001': 0.08875, // New York
+      'default': 0.07
+    };
+
+    function calculate() {
+      const price = parseFloat(document.getElementById('price').value);
+      const discount = parseFloat(document.getElementById('discount').value);
+      const zip = document.getElementById('zip').value.trim();
+
+      const rate = taxRates[zip] ?? taxRates['default'];
+
+      const discountedPrice = price * (1 - discount / 100);
+      const tax = discountedPrice * rate;
+      const total = discountedPrice + tax;
+
+      document.getElementById('result').innerText =
+        `Expected total: $${total.toFixed(2)} (Tax: $${tax.toFixed(2)})`;
+    }
+  </script>
+</body>
+</html>

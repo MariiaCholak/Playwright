@@ -2,7 +2,7 @@
 import { Locator, Page } from "@playwright/test";
 import { BasePage } from "./BasePage";
 
-export class ShoppingCart extends BasePage {
+export class ShoppingCart  extends BasePage {
     readonly headingAvailableCourses: Locator;
     readonly allCourses: Locator;
     readonly SDETCourseandCypressPlaywright: Locator;

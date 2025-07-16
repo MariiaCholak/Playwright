@@ -1,54 +1,77 @@
-<testsuites id="" name="" tests="5" failures="0" skipped="0" errors="0" time="35.73667100000009">
-<testsuite name="basics\02-project-shopping-cart.spec.ts" timestamp="2025-06-10T16:36:21.832Z" hostname="Basics" tests="5" failures="0" skipped="0" time="64.698" errors="0">
-<testcase name="provide students with hands-on experience in automating the validation of an ecommerce website&apos;s frontend functionalities. › Test Case 01 - Todo-App Modal Verification" classname="basics\02-project-shopping-cart.spec.ts" time="12.451">
+<testsuites id="" name="" tests="5" failures="0" skipped="0" errors="0" time="14.072663999998943">
+<testsuite name="api\homework-API.spec.ts" timestamp="2025-07-15T22:27:41.975Z" hostname="Regression" tests="5" failures="0" skipped="0" time="5.383" errors="0">
+<testcase name="API e2e test to perform CRUD operations on student data › Retrieve all students and validate the response" classname="api\homework-API.spec.ts" time="1.648">
 <system-out>
-<![CDATA[
-[[ATTACHMENT|..\test-results\02-project-shopping-cart-p-f1ceb-Todo-App-Modal-Verification-Basics\trace.zip]]
+<![CDATA[[
+  {
+    STUDENT_ID: [33m10514[39m,
+    DOB: [32m'1995-12-23T00:00:00.000Z'[39m,
+    EMAIL: [32m'ayah-elkossei.tgschool@gmail.com'[39m,
+    FIRST_NAME: [32m'Ayah'[39m,
+    LAST_NAME: [32m'Elkossei'[39m,
+    INSTRUCTOR_ID: [33m2[39m,
+    INSTRUCTOR_NAME: [32m'Robert Hass'[39m
+  },
+  {
+    STUDENT_ID: [33m1[39m,
+    DOB: [32m'2020-09-20T00:00:00.000Z'[39m,
+    EMAIL: [32m'tech.global@techglobal.com'[39m,
+    FIRST_NAME: [32m'Tech'[39m,
+    LAST_NAME: [32m'Global'[39m,
+    INSTRUCTOR_ID: [33m1[39m,
+    INSTRUCTOR_NAME: [32m'Leyla Haddad'[39m
+  },
+  {
+    STUDENT_ID: [33m2[39m,
+    DOB: [32m'1990-01-01T00:00:00.000Z'[39m,
+    EMAIL: [32m'john.doe@techglobal.com'[39m,
+    FIRST_NAME: [32m'John'[39m,
+    LAST_NAME: [32m'Doe'[39m,
+    INSTRUCTOR_ID: [33m2[39m,
+    INSTRUCTOR_NAME: [32m'Robert Hass'[39m
+  }
+]
 ]]>
 </system-out>
 </testcase>
-<testcase name="provide students with hands-on experience in automating the validation of an ecommerce website&apos;s frontend functionalities. › Test Case 02 -  Cart Section Validation" classname="basics\02-project-shopping-cart.spec.ts" time="12.403">
+<testcase name="API e2e test to perform CRUD operations on student data › Create a new student and validate the response" classname="api\homework-API.spec.ts" time="0.877">
 <system-out>
-<![CDATA[
-[[ATTACHMENT|..\test-results\02-project-shopping-cart-p-f4d40-2---Cart-Section-Validation-Basics\trace.zip]]
+<![CDATA[{
+  STUDENT_ID: [33m10515[39m,
+  DOB: [32m'1995-01-01'[39m,
+  EMAIL: [32m'tgschool@gmail.com'[39m,
+  FIRST_NAME: [32m'MMMM'[39m,
+  LAST_NAME: [32m'Global'[39m,
+  INSTRUCTOR_ID: [33m2[39m
+}
+Student created: {
+  STUDENT_ID: [33m10515[39m,
+  DOB: [32m'1995-01-01'[39m,
+  EMAIL: [32m'tgschool@gmail.com'[39m,
+  FIRST_NAME: [32m'MMMM'[39m,
+  LAST_NAME: [32m'Global'[39m,
+  INSTRUCTOR_ID: [33m2[39m
+}
 ]]>
 </system-out>
 </testcase>
-<testcase name="provide students with hands-on experience in automating the validation of an ecommerce website&apos;s frontend functionalities. › Test Case 03 - Add a Course to the Cart and Validate" classname="basics\02-project-shopping-cart.spec.ts" time="14.28">
+<testcase name="API e2e test to perform CRUD operations on student data › Get the student we created using GET" classname="api\homework-API.spec.ts" time="0.963">
 <system-out>
-<![CDATA[
-[[ATTACHMENT|..\test-results\02-project-shopping-cart-p-d97bc-se-to-the-Cart-and-Validate-Basics\trace.zip]]
+<![CDATA[{
+  STUDENT_ID: [33m10515[39m,
+  DOB: [32m'1995-01-01T00:00:00.000Z'[39m,
+  EMAIL: [32m'tgschool@gmail.com'[39m,
+  FIRST_NAME: [32m'MMMM'[39m,
+  LAST_NAME: [32m'Global'[39m,
+  INSTRUCTOR_ID: [33m2[39m,
+  INSTRUCTOR_NAME: [32m'Robert Hass'[39m
+}
 ]]>
 </system-out>
 </testcase>
-<testcase name="provide students with hands-on experience in automating the validation of an ecommerce website&apos;s frontend functionalities. › Test Case 04 - Add Two Courses to the Cart and Validate" classname="basics\02-project-shopping-cart.spec.ts" time="16.439">
-<system-out>
-<![CDATA[
-[[ATTACHMENT|..\test-results\02-project-shopping-cart-p-780ce-es-to-the-Cart-and-Validate-Basics\trace.zip]]
-]]>
-</system-out>
+<testcase name="API e2e test to perform CRUD operations on student data › Update Newly Created Student with a Different Instructor" classname="api\homework-API.spec.ts" time="0.891">
 </testcase>
-<testcase name="provide students with hands-on experience in automating the validation of an ecommerce website&apos;s frontend functionalities. › Test Case 05 - Add All Three Courses to the Cart and Validate" classname="basics\02-project-shopping-cart.spec.ts" time="9.125">
-<system-out>
-<![CDATA[Course 1
-Title: SDET Course | Cypress Playwright
-Full price: 80
-Discount percent: 0
-Expected (after discount): 80
-Course 2
-Title: Playwright Automation Testing
-Full price: 72
-Discount percent: 0
-Expected (after discount): 72
-Course 3
-Title: Cypress Automation Course
-Full price: 10
-Discount percent: 0
-Expected (after discount): 10
-
-[[ATTACHMENT|..\test-results\02-project-shopping-cart-p-c0d2f-es-to-the-Cart-and-Validate-Basics\trace.zip]]
-]]>
-</system-out>
+<testcase name="API e2e test to perform CRUD operations on student data › Delete the student  using DELETE" classname="api\homework-API.spec.ts" time="1.004">
 </testcase>
 </testsuite>
 </testsuites>
